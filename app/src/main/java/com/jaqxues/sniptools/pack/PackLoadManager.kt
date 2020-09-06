@@ -56,7 +56,7 @@ object PackLoadManager {
 
         try {
             val pack: ModPack = ModPackBase.buildPack(context, packFile, certificate, packBuilder)
-            packLoadStates[packFile.name] = StatefulPackData.LoadedPack(packFile, pack.metadata)
+            packLoadStates[packFile.name] = StatefulPackData.LoadedPack(packFile, metadata)
             return pack
         } catch (t: Throwable) {
             packLoadStates[packFile.name] = StatefulPackData.PackLoadError(packFile, metadata, t.message!!)
