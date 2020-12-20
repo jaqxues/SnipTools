@@ -26,7 +26,7 @@ class SavingFeature : IFeature() {
     override fun loadFeature(classLoader: ClassLoader, context: Context) {
         if (AUTO_SAVE_SNAPS.getPref()) {
             val isVideoAddIns = AddInsField<Boolean>()
-            findAndHookMethod("vJ5", classLoader, "t", "g66 ", after {
+            findAndHookMethod("VO5", classLoader, "v", "Kb6 ", after {
                 it.result?.let { result ->
                     val isVideo = when (val type = getObjectField(it.args[0], "b").toString()) {
                         "IMAGE" -> false
